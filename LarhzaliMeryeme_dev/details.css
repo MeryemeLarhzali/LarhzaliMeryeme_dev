@@ -1,0 +1,36 @@
+/* Style pour la page details.html */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+}
+
+.details-heading {
+    background-color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+b{
+    color: #333;
+}
+.details-heading h1 {
+    margin: 0;
+    color: pink;
+}
+
+.details-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.details-content h2 {
+    color: #444;
+}
+
+.details-content p {
+    color: #333;
+    line-height: 1.6;
+}

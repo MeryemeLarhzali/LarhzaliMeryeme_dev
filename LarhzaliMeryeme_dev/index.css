@@ -1,0 +1,297 @@
+
+/*body {
+  background-image: url('img-5.jpg');
+  background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la fenêtre */
+  /*background-repeat: no-repeat; /* Empêche la répétition de l'image */
+  /* Autres styles facultatifs */
+  /* background-position: center center; */ /* Centre l'image horizontalement et verticalement */
+  /* background-attachment: fixed; */ /* Fixe l'image pour qu'elle reste en place pendant le défilement */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: century;
+  
+}
+body{
+  color: aliceblue;
+  background-color: black;
+}
+
+header{
+  background-image: url(images/navbar-bg.png);
+  height: 120vh;
+  background-size: cover;
+  background-position:center;
+}
+
+.logo img {
+  width: 100px; /* Ajustez la largeur selon vos besoins */
+  height: auto; /* Permet de maintenir les proportions de l'image */
+  margin-right: 0px; /* Espace à droite du logo */
+}
+.logo {
+  position: absolute;
+  top: 10px; /* Ajustez cette valeur pour régler la distance depuis le haut de la page */
+  left: 10px; /* Ajustez cette valeur pour régler la distance depuis la gauche de la page */
+  z-index: 9999; /* Assurez-vous que le logo apparaît au-dessus des autres éléments si nécessaire */
+}
+/* des animation sur le logo      
+ crée une transition fluide (transition) pour agrandir progressivement (transform: scale(1.1))
+ le logo contenu dans l'élément  .logo lorsque l'utilisateur survole l'image avec la souris (:hover).*/
+.logo img {
+  transition: transform 0.6s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.4);/* ici le scale() le nombre qu'on écrit c'est celui qui mentre combient je veux agrandir mon logo*/
+}
+/* fin de transition */
+
+
+
+ul{
+  list-style: none;
+  float: right;
+  display: flex;
+  margin-top: 20px;
+}
+ul li a {
+  text-decoration: none;
+  color: #ffd3e0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color:transparent;
+  color:#ffd3e0;
+  margin: 10px;
+  font-weight: 500;
+  transition: 0.6s ease;
+}
+ul li a:hover{
+  background: #ffd3e0;
+  color: purple;
+}
+ul li.active a{
+  background: #ffd3e0;
+  color: purple;
+}
+.titre{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+b{
+  color: #ffd3e0;
+}
+.titre h3{
+  font-size: 25px;
+  margin: 0;
+}
+h3::before{
+  content: 'Meryeme Éclat Beauté ';
+  font-size: 600;
+  animation: animate 8s infinite;
+}
+@keyframes animate{
+  0%{
+    font-size: 100%;
+    opacity: 1;
+  }
+  25%{
+    font-size: 150%;
+    opacity: 1;
+  }
+  50%{
+    font-size: 100%;
+    opacity: 1;
+  }
+  75%{
+    font-size: 150%;
+    opacity: 1;
+    content: 'Relevez Votre Beauté ';
+  }
+  100%{
+    font-size: 100%;
+    opacity: 0;
+  }
+}
+
+/* footer*/
+.footer {
+  background-color: black;
+  color: #fff;
+  padding: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.container div {
+  flex: 1;
+  max-width: 200px;
+}
+
+.container h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.container p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+/* */
+#linksSocial a {
+  font-size: 30px;
+  
+}
+#linksSocial .bx.bxl-facebook-square {
+  color: #3b5998;
+}
+#linksSocial .bx.bxl-instagram {
+  background: -webkit-linear-gradient( #fdf497, #fd5949, #d6249f, #285AEB);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#linksSocial .bx.bxl-linkedin-square {
+  color: #0077b5;
+}
+#linksSocial .bx.bxl-gmail {
+  color: #dd4b39;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-right: 60px; /* Ajuste la marge à gauche pour déplacer vers la droite */
+  display: flex;
+  flex-direction: column; /* Affiche les éléments en colonne */
+  align-items: flex-start; /* Aligne les éléments sur la gauche */
+}
+
+.quick-links li {
+  margin-bottom: 30px;/* pour les espaces verticalement entre les liens */
+}
+
+.newsletter input[type="email"] {
+  position: static;
+  width: 250px;
+  height: 30px;
+  color: purple;
+  background-color: #ffd3e0;
+  border-radius: 10px;
+}
+
+button[type="submit"] {
+  position: static;
+  width: 100px;
+  height: 30px;
+  color: purple;
+  background-color: #ffd3e0;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Style pour la section de témoignages */
+
+.testimonials {
+  background-color: black;
+  color: black;
+  padding: 50px 0;
+  align-items: center; /* Centre les éléments horizontalement */
+  
+}
+
+.contenaire {
+  width: 80%;
+  margin: 0 auto;
+  
+}
+
+.testimonials h2 {
+  color: pink;
+  text-align: center;
+
+}
+
+.testimonial-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+  gap: 20px; /* Espacement entre les témoignages */
+  justify-content: center; /* Centre les témoignages horizontalement */
+  margin-top: 30px;
+}
+
+.testimonial {
+  width: 100%; /* Chaque témoignage occupe la largeur complète de sa colonne */
+  text-align: center;
+  padding: 20px;
+  border: 2px solid pink;
+  border-radius: 10px;
+  box-sizing: border-box; /* Prend en compte les bordures dans la largeur définie */
+  background-color: pink;
+}
+
+.testimonial blockquote {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-weight: bold;
+}
+
+/* Style pour la section de la galerie d'images */
+.gallery {
+  background-color: black; /* Couleur de fond pour la section */
+  padding: 50px 0; /* Espace intérieur pour les images */
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;/*En utilisant flex-wrap: wrap;, tu indiques aux éléments flexibles de passer à la ligne suivante 
+  une fois qu'ils ne peuvent plus tenir sur la même ligne horizontale. Cela signifie que les éléments flexibles 
+  peuvent occuper plusieurs lignes s'ils ne rentrent pas tous sur une seule ligne.*/
+  
+}
+
+.image-container img {
+  width: 30%; /* Ajuste la largeur de chaque image */
+  margin-bottom: 20px; /* Espace entre les images */
+  border: 2px solid pink;
+  border-radius: 10px;
+}
+.gallery h2{
+  text-align: center;
+  color: pink;
+  
+}
+/* Style pour la galerie */
+.gallery {
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.image-container img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Transition pour un effet fluide */
+}
+
+.image-container img:hover {
+  transform: scale(1.1); /* Agrandissement au survol */
+}
+
